@@ -26,7 +26,7 @@ class User
     private ?string $role = null;
 
     #[ORM\ManyToOne(inversedBy: 'users')]
-    private ?Subscription $subcription = null;
+    private ?Subscription $subscription= null;
 
     public function getId(): ?int
     {
@@ -84,18 +84,6 @@ class User
     public function setRole(string $role): static
     {
         $this->role = $role;
-
-        return $this;
-    }
-
-    public function getSubcription(): ?Subscription
-    {
-        return $this->subcription;
-    }
-
-    public function setSubcription(?Subscription $subcription): static
-    {
-        $this->subcription = $subcription;
 
         return $this;
     }

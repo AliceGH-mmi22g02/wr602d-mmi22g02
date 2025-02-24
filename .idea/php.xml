@@ -142,8 +142,13 @@
       <path value="$PROJECT_DIR$/application/vendor/symfony/monolog-bundle" />
       <path value="$PROJECT_DIR$/application/vendor/symfony/polyfill-intl-icu" />
       <path value="$PROJECT_DIR$/application/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/application/vendor/squizlabs/php_codesniffer" />
+      <path value="$PROJECT_DIR$/application/vendor/phpstan/phpstan" />
+      <path value="$PROJECT_DIR$/application/vendor/phpmd/phpmd" />
+      <path value="$PROJECT_DIR$/application/vendor/pdepend/pdepend" />
     </include_path>
   </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />
   <component name="PhpStanOptionsConfiguration">
     <option name="transferred" value="true" />
   </component>

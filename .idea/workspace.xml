@@ -4,14 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82a2595b-d379-4348-95d1-97d3a197de38" name="Changes" comment="">
+    <list default="true" id="82a2595b-d379-4348-95d1-97d3a197de38" name="Changes" comment="feat:entites">
+      <change beforePath="$PROJECT_DIR$/.idea/codeception.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeception.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/phpspec.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpspec.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/.env" beforeDir="false" afterPath="$PROJECT_DIR$/application/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/application/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/application/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/application/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/Entity/File.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/Entity/File.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/Entity/Subscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/Entity/Subscription.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/Kernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/application/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="feature/make-entites" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -165,6 +170,10 @@
       <path value="$PROJECT_DIR$/application/vendor/symfony/monolog-bundle" />
       <path value="$PROJECT_DIR$/application/vendor/symfony/polyfill-intl-icu" />
       <path value="$PROJECT_DIR$/application/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/application/vendor/squizlabs/php_codesniffer" />
+      <path value="$PROJECT_DIR$/application/vendor/phpstan/phpstan" />
+      <path value="$PROJECT_DIR$/application/vendor/phpmd/phpmd" />
+      <path value="$PROJECT_DIR$/application/vendor/pdepend/pdepend" />
     </include_path>
   </component>
   <component name="ProjectColorInfo">{
@@ -180,13 +189,14 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "feature/make-entites",
+    "git-widget-placeholder": "feature/test",
     "last_opened_file_path": "//wsl$/Ubuntu/home/alice/buts5/www/html/wr602d-mmi22g02/application",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -213,9 +223,33 @@
       <workItem from="1740391404737" duration="404000" />
       <workItem from="1740391819359" duration="1184000" />
     </task>
+    <task id="LOCAL-00001" summary="feat:entites">
+      <option name="closed" value="true" />
+      <created>1740400202557</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1740400202557</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat:entites" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat:entites" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/src/Kernel.php</url>
+          <line>4</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
