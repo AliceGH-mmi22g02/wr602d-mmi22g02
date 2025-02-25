@@ -56,6 +56,8 @@ class UserTest extends TestCase
         $subscription->setSpecialPrice($specialPrice);
         $subscription->setSpecialPriceFrom($specialPriceFrom);
         $subscription->setSpecialPriceTo($specialPriceTo);
+        $subscription->addUser($user1);
+        $subscription->addUser($user2);
 
         // Utilisation des setters pour le fichier
         $file->setName($nameFile);
@@ -83,6 +85,10 @@ class UserTest extends TestCase
         $this->assertEquals($specialPrice, $subscription->getSpecialPrice());
         $this->assertEquals($specialPriceFrom, $subscription->getSpecialPriceFrom());
         $this->assertEquals($specialPriceTo, $subscription->getSpecialPriceTo());
+        $users = $subscription->getUsers();
+        $this->assertCount(2, $users);
+        $this->assertContains($user1, $users);
+        $this->assertContains($user2, $users);
 
         // Vérification des getters pour le fichier
         $this->assertEquals($nameFile, $file->getName());
