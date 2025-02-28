@@ -23,7 +23,7 @@ jobs:
 
       - name: Copy .env.test.local
         run: php -r "file_exists('.env.test.local') || copy('.env.test', '.env.test.local');"
-        working-directory: wr602d-mmi22g02/application
+        working-directory: wr602d-mmi22g02
 
       - name: Cache Composer packages
         id: composer-cache
