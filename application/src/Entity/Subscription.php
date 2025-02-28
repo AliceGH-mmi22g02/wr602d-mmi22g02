@@ -23,24 +23,24 @@ class Subscription
     private ?string $description = null;
 
     #[ORM\Column]
-    private ?int $max_pdf = null;
+    private ?int $maxPdf = null;
 
     #[ORM\Column]
     private ?float $price = null;
 
     #[ORM\Column(nullable: true)]
-    private ?float $special_price = null;
+    private ?float $specialPrice = null;
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE, nullable: true)]
-    private ?\DateTimeInterface $special_price_from = null;
+    private ?\DateTimeInterface $specialPriceFrom = null;
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE, nullable: true)]
-    private ?\DateTimeInterface $special_price_to = null;
+    private ?\DateTimeInterface $specialPriceTo = null;
 
     /**
      * @var Collection<int, User>
      */
-    #[ORM\OneToMany(targetEntity: User::class, mappedBy: 'subcription')]
+    #[ORM\OneToMany(targetEntity: User::class, mappedBy: 'subscription')]
     private Collection $users;
 
     public function __construct()
@@ -79,12 +79,12 @@ class Subscription
 
     public function getMaxPdf(): ?int
     {
-        return $this->max_pdf;
+        return $this->maxPdf;
     }
 
-    public function setMaxPdf(int $max_pdf): static
+    public function setMaxPdf(int $maxPdf): static
     {
-        $this->max_pdf = $max_pdf;
+        $this->maxPdf = $maxPdf;
 
         return $this;
     }
@@ -103,36 +103,36 @@ class Subscription
 
     public function getSpecialPrice(): ?float
     {
-        return $this->special_price;
+        return $this->specialPrice;
     }
 
-    public function setSpecialPrice(?float $special_price): static
+    public function setSpecialPrice(?float $specialPrice): static
     {
-        $this->special_price = $special_price;
+        $this->specialPrice = $specialPrice;
 
         return $this;
     }
 
     public function getSpecialPriceFrom(): ?\DateTimeInterface
     {
-        return $this->special_price_from;
+        return $this->specialPriceFrom;
     }
 
-    public function setSpecialPriceFrom(?\DateTimeInterface $special_price_from): static
+    public function setSpecialPriceFrom(?\DateTimeInterface $specialPriceFrom): static
     {
-        $this->special_price_from = $special_price_from;
+        $this->specialPriceFrom = $specialPriceFrom;
 
         return $this;
     }
 
     public function getSpecialPriceTo(): ?\DateTimeInterface
     {
-        return $this->special_price_to;
+        return $this->specialPriceTo;
     }
 
-    public function setSpecialPriceTo(?\DateTimeInterface $special_price_to): static
+    public function setSpecialPriceTo(?\DateTimeInterface $specialPriceTo): static
     {
-        $this->special_price_to = $special_price_to;
+        $this->specialPriceTo = $specialPriceTo;
 
         return $this;
     }
@@ -149,7 +149,7 @@ class Subscription
     {
         if (!$this->users->contains($user)) {
             $this->users->add($user);
-            $user->setSubcription($this);
+            $user->setSubscription($this);
         }
 
         return $this;
@@ -159,38 +159,8 @@ class Subscription
     {
         if ($this->users->removeElement($user)) {
             // set the owning side to null (unless already changed)
-            if ($user->getSubcription() === $this) {
-                $user->setSubcription(null);
-            }
-        }
-
-        return $this;
-    }
-
-    /**
-     * @return Collection<int, User>
-     */
-    public function getUserId(): Collection
-    {
-        return $this->user_id;
-    }
-
-    public function addUserId(User $userId): static
-    {
-        if (!$this->user_id->contains($userId)) {
-            $this->user_id->add($userId);
-            $userId->setSubscription($this);
-        }
-
-        return $this;
-    }
-
-    public function removeUserId(User $userId): static
-    {
-        if ($this->user_id->removeElement($userId)) {
-            // set the owning side to null (unless already changed)
-            if ($userId->getSubscription() === $this) {
-                $userId->setSubscription(null);
+            if ($user->getSubscription() === $this) {
+                $user->setSubscription(null);
             }
         }
 
