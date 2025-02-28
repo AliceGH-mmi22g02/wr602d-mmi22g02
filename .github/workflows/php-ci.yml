@@ -33,39 +33,39 @@ jobs:
       - name: Install dependencies
         run: |
           composer update --lock
-          composer install --no-cache --prefer-dist
-        working-directory: wr602d-mmi22g02/application
+          composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+        working-directory: application
 
       - name: Check vendor/bin contents
         run: ls -la vendor/bin
-        working-directory: wr602d-mmi22g02/application
+        working-directory: application
 
       - name: Ensure PHP_CodeSniffer is installed
         run: composer require --dev squizlabs/php_codesniffer
-        working-directory: wr602d-mmi22g02/application
+        working-directory: application
 
       - name: Run PHP_CodeSniffer
         run: vendor/bin/phpcs --standard=PSR2 src/
-        working-directory: wr602d-mmi22g02/application
+        working-directory: application
 
       - name: Ensure PHPStan is installed
         run: composer require --dev phpstan/phpstan
-        working-directory: wr602d-mmi22g02/application
+        working-directory: application
 
       - name: Run PHPStan
         run: vendor/bin/phpstan analyze src/
-        working-directory: wr602d-mmi22g02/application
+        working-directory: application
 
       - name: Ensure PHPMD is installed
         run: composer require --dev phpmd/phpmd
-        working-directory: wr602d-mmi22g02/application
+        working-directory: application
 
       - name: Run PHPMD
         run: vendor/bin/phpmd src/ text cleancode,codesize,controversial,design,naming
-        working-directory: wr602d-mmi22g02/application
+        working-directory: application
 
       - name: Create Database
         run: |
           mkdir -p data
           touch data/database.sqlite
-        working-directory: wr602d-mmi22g02/application
+        working-directory: application
