@@ -21,10 +21,6 @@ jobs:
 
       - uses: actions/checkout@v4
 
-      - name: Copy .env.test.local
-        run: php -r "file_exists('.env.test.local') || copy('.env.test', '.env.test.local');"
-        working-directory: wr602d-mmi22g02
-
       - name: Cache Composer packages
         id: composer-cache
         uses: actions/cache@v3
