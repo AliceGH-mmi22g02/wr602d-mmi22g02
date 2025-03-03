@@ -75,7 +75,6 @@
       <path value="$PROJECT_DIR$/application/vendor/symfony/web-profiler-bundle" />
       <path value="$PROJECT_DIR$/application/vendor/symfony/serializer" />
       <path value="$PROJECT_DIR$/application/vendor/symfony/polyfill-intl-idn" />
-      <path value="$PROJECT_DIR$/application/vendor/symfony/ux-turbo" />
       <path value="$PROJECT_DIR$/application/vendor/symfony/stimulus-bundle" />
       <path value="$PROJECT_DIR$/application/vendor/symfony/type-info" />
       <path value="$PROJECT_DIR$/application/vendor/symfony/debug-bundle" />

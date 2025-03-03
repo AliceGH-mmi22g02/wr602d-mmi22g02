@@ -4,8 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82a2595b-d379-4348-95d1-97d3a197de38" name="Changes" comment="feat:test">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/php-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/php-ci.yml" afterDir="false" />
+    <list default="true" id="82a2595b-d379-4348-95d1-97d3a197de38" name="Changes" comment="feat:client">
+      <change afterPath="$PROJECT_DIR$/application/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/Controller/PdfController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/Service/GotenbergService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/tests/Service/HttpClientServiceTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/.env" beforeDir="false" afterPath="$PROJECT_DIR$/application/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/assets/controllers.json" beforeDir="false" afterPath="$PROJECT_DIR$/application/assets/controllers.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/application/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/application/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/routes.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/application/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,10 +29,17 @@
     <pharConfigPath>$PROJECT_DIR$/application/composer.json</pharConfigPath>
     <execution />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/make-entites" />
+        <entry key="$PROJECT_DIR$" value="feature/test" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -92,7 +112,6 @@
       <path value="$PROJECT_DIR$/application/vendor/symfony/web-profiler-bundle" />
       <path value="$PROJECT_DIR$/application/vendor/symfony/serializer" />
       <path value="$PROJECT_DIR$/application/vendor/symfony/polyfill-intl-idn" />
-      <path value="$PROJECT_DIR$/application/vendor/symfony/ux-turbo" />
       <path value="$PROJECT_DIR$/application/vendor/symfony/stimulus-bundle" />
       <path value="$PROJECT_DIR$/application/vendor/symfony/type-info" />
       <path value="$PROJECT_DIR$/application/vendor/symfony/debug-bundle" />
@@ -175,11 +194,12 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/test&quot;,
-    &quot;last_opened_file_path&quot;: &quot;//wsl$/Ubuntu/home/alice/buts6/WRA508D&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/httpclient&quot;,
+    &quot;last_opened_file_path&quot;: &quot;//wsl$/Ubuntu/home/alice/buts5/www/html/wr602d-mmi22g02/application/templates&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -191,6 +211,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu\home\alice\buts5\www\html\wr602d-mmi22g02\application\templates" />
       <recent name="\\wsl$\Ubuntu\home\alice\buts5\www\html\wr602d-mmi22g02\application" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -210,7 +231,9 @@
       <workItem from="1740391819359" duration="1184000" />
       <workItem from="1740474717000" duration="2101000" />
       <workItem from="1740479881136" duration="141000" />
-      <workItem from="1740727218987" duration="4684000" />
+      <workItem from="1740727218987" duration="7790000" />
+      <workItem from="1740986053616" duration="21615000" />
+      <workItem from="1741008981484" duration="80000" />
     </task>
     <task id="LOCAL-00001" summary="feat:entites">
       <option name="closed" value="true" />
@@ -308,7 +331,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740731882989</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="feat:test">
+      <option name="closed" value="true" />
+      <created>1740732494650</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1740732494650</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,7 +359,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat:entites" />
     <MESSAGE value="feat:test" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat:test" />
+    <MESSAGE value="feat:client" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat:client" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
