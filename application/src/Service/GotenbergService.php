@@ -2,7 +2,6 @@
 namespace App\Service;
 
 use Symfony\Contracts\HttpClient\HttpClientInterface;
-use Symfony\Contracts\HttpClient\ResponseInterface;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -14,42 +13,43 @@ class GotenbergService
     public function __construct(HttpClientInterface $client, ParameterBagInterface $params)
     {
         $this->client = $client;
-        $this->gotenbergUrl = $params->get('gotenberg_url');  // Accède à la variable 'gotenberg_url' dans le fichier de configuration
+        $this->gotenbergUrl = $params->get('gotenberg_url');
     }
 
-    // Méthode pour générer un PDF à partir du contenu HTML
     public function generatePdfFromHtml(string $htmlContent): Response
     {
+        $boundary = '----WebKitFormBoundary' . bin2hex(random_bytes(16));
+
+        $body = "--$boundary\r\n";
+        $body .= "Content-Disposition: form-data; name=\"files\"; filename=\"index.html\"\r\n";
+        $body .= "Content-Type: text/html\r\n\r\n";
+        $body .= $htmlContent . "\r\n";
+        $body .= "--$boundary--\r\n";
+
         $response = $this->client->request('POST', "{$this->gotenbergUrl}/forms/chromium/convert/html", [
             'headers' => [
-                'Content-Type' => 'multipart/form-data',
+                'Content-Type' => "multipart/form-data; boundary=$boundary",
+                'Accept' => 'application/pdf',
             ],
-            'body' => [
-                'files' => [
-                    'index.html' => fopen('data://text/plain,' . $htmlContent, 'r'),
-                ],
-            ],
+            'body' => $body,
         ]);
 
-        // Vérifier si la requête a réussi
         if ($response->getStatusCode() !== 200) {
             throw new \RuntimeException('Erreur lors de la génération du PDF : ' . $response->getContent(false));
         }
 
-        // Retourner la réponse Symfony avec le contenu du PDF
         return new Response($response->getContent(), 200, [
             'Content-Type' => 'application/pdf',
             'Content-Disposition' => 'attachment; filename="document.pdf"',
         ]);
     }
 
-    // Méthode pour générer un PDF à partir d'un fichier HTML
     public function generatePdfFromHtmlFile(string $filePath): Response
     {
-        // Lire le contenu du fichier HTML
+        if (!file_exists($filePath)) {
+            throw new \RuntimeException('Le fichier HTML spécifié est introuvable : ' . $filePath);
+        }
         $htmlContent = file_get_contents($filePath);
-
-        // Appeler la méthode pour générer le PDF
         return $this->generatePdfFromHtml($htmlContent);
     }
 }

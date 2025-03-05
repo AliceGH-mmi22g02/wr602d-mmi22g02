@@ -7,8 +7,9 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
 use App\Service\GotenbergService;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 class PdfController extends AbstractController
 {
@@ -24,12 +25,33 @@ class PdfController extends AbstractController
      */
     public function generatePdf(Request $request): Response
     {
-        $htmlFilePath = '/var/www/wr602d-mmi22g02/application/public/index.html'; // Mettez à jour ce chemin si nécessaire
+        $form = $this->createFormBuilder()
+            ->add('htmlFile', FileType::class, [
+                'label' => 'Votre fichier html : ',
+                'mapped' => false,
+                'required' => true,
+            ])
+            ->getForm();
 
-        try {
-            return $this->gotenbergService->generatePdfFromHtml($htmlFilePath);
-        } catch (\RuntimeException $e) {
-            return new Response($e->getMessage(), 500);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            /** @var UploadedFile $uploadedFile */
+            $uploadedFile = $form->get('htmlFile')->getData();
+
+            if ($uploadedFile) {
+                $filePath = $uploadedFile->getRealPath();
+
+                try {
+                    return $this->gotenbergService->generatePdfFromHtmlFile($filePath);
+                } catch (\RuntimeException $e) {
+                    return new Response($e->getMessage(), 500);
+                }
+            }
         }
+
+        return $this->render('pdf/generate_pdf.html.twig', [
+            'form' => $form->createView(),
+        ]);
     }
 }
