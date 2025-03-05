@@ -6,11 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="82a2595b-d379-4348-95d1-97d3a197de38" name="Changes" comment="feat:client">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/assets/styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/application/assets/styles/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/assets/controllers/hello_controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/application/assets/controllers/hello_controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/config/preload.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/preload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/importmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/importmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/public/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/src/Controller/PdfController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/Controller/PdfController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/Entity/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/src/Service/GotenbergService.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/Service/GotenbergService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/tests/Entity/UserTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/tests/Entity/UserTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/tests/Service/HttpClientServiceTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/tests/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/tests/bootstrap.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +233,7 @@
       <workItem from="1740986053616" duration="21615000" />
       <workItem from="1741008981484" duration="392000" />
       <workItem from="1741013753672" duration="761000" />
-      <workItem from="1741181115877" duration="4186000" />
+      <workItem from="1741181115877" duration="7575000" />
     </task>
     <task id="LOCAL-00001" summary="feat:entites">
       <option name="closed" value="true" />
@@ -341,7 +347,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741009128287</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="feat:client">
+      <option name="closed" value="true" />
+      <created>1741185373498</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1741185373498</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
