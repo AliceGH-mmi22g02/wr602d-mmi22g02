@@ -26,7 +26,7 @@ class User
     private ?string $role = null;
 
     #[ORM\ManyToOne(inversedBy: 'users')]
-    private ?Subscription $subscription= null;
+    private ?Subscription $subscription = null;
 
     public function getId(): ?int
     {
