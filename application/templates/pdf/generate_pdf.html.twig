@@ -3,8 +3,9 @@
 {% block title %}Générer PDF{% endblock %}
 
 {% block body %}
-    <h1>Générer un PDF à partir d'un fichier HTML</h1>
+    <h1>Générer ou convertir un PDF</h1>
 
+    <h2>Générer un PDF à partir d'un fichier HTML</h2>
     {{ form_start(form) }}
     {{ form_row(form.htmlFile) }}
     <button class="btn btn-primary" type="submit">Générer PDF</button>

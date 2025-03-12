@@ -12,6 +12,16 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+    <nav>
+        <ul>
+            <li><a href="{{ path('homepage') }}">Accueil</a></li>
+            <li><a href="{{ path('app_security') }}">Se connecter</a></li>
+            <li><a href="{{ path('pdf_generate') }}">Générer un PDF</a></li>
+            <li><a href="{{ path('app_subscription') }}">Modifier l'abonnement</a></li>
+            <li><a href="{{ path('app_history') }}">Historique</a></li>
+        </ul>
+    </nav>
+        {% block body %}
+        {% endblock %}
     </body>
 </html>
