@@ -69,7 +69,7 @@ class GotenbergService
         try {
             return new Response($response->getContent(), 200, [
                 'Content-Type' => 'application/pdf',
-                'Content-Disposition' => 'attachment; filename="document.pdf"',
+                'Content-Disposition' => 'attachment; filename=myPdf.pdf',
             ]);
         } catch (Exception $e) {
             return new Response('Erreur lors de la création de la réponse PDF : ' . $e->getMessage(), 500);

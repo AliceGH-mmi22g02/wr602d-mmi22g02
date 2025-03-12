@@ -6,17 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="82a2595b-d379-4348-95d1-97d3a197de38" name="Changes" comment="feat:client">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/assets/controllers/hello_controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/application/assets/controllers/hello_controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/preload.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/preload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/importmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/importmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/public/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/src/Controller/PdfController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/Controller/PdfController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/Entity/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/src/Service/GotenbergService.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/Service/GotenbergService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/tests/Entity/UserTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/tests/Entity/UserTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/tests/Service/HttpClientServiceTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/tests/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/tests/bootstrap.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,23 +181,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "feature/httpclient",
-    "last_opened_file_path": "//wsl$/Ubuntu/home/alice/buts5/www/html/wr602d-mmi22g02",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/httpclient&quot;,
+    &quot;last_opened_file_path&quot;: &quot;//wsl$/Ubuntu/home/alice/buts5/www/html/wr602d-mmi22g02&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="\\wsl$\Ubuntu\home\alice\buts5\www\html\wr602d-mmi22g02\application\templates" />
@@ -233,7 +224,9 @@
       <workItem from="1740986053616" duration="21615000" />
       <workItem from="1741008981484" duration="392000" />
       <workItem from="1741013753672" duration="761000" />
-      <workItem from="1741181115877" duration="7575000" />
+      <workItem from="1741181115877" duration="10946000" />
+      <workItem from="1741337564429" duration="47000" />
+      <workItem from="1741763553550" duration="3283000" />
     </task>
     <task id="LOCAL-00001" summary="feat:entites">
       <option name="closed" value="true" />
@@ -355,7 +348,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741185373498</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="feat:client">
+      <option name="closed" value="true" />
+      <created>1741189008685</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1741189008685</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
