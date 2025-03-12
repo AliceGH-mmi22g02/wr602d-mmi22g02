@@ -40,4 +40,15 @@ class FileRepository extends ServiceEntityRepository
     //            ->getOneOrNullResult()
     //        ;
     //    }
+
+    /**
+     * @return File[] Returns an array of File objects sorted by creation date (desc)
+     */
+    public function findFilesByDateDesc(): array
+    {
+        return $this->createQueryBuilder('f')
+            ->orderBy('f.createdAt', 'DESC')
+            ->getQuery()
+            ->getResult();
+    }
 }

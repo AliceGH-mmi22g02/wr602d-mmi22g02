@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82a2595b-d379-4348-95d1-97d3a197de38" name="Changes" comment="feat:client" />
+    <list default="true" id="82a2595b-d379-4348-95d1-97d3a197de38" name="Changes" comment="feat:client">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/assets/controllers.json" beforeDir="false" afterPath="$PROJECT_DIR$/application/assets/controllers.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/routes.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/Repository/FileRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/Repository/FileRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/application/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/templates/history/index.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/templates/home/index.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/templates/pdf/generate_pdf.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/application/templates/pdf/generate_pdf.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/templates/subscription/index.html.twig" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,7 +34,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/test" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -177,23 +187,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/httpclient&quot;,
-    &quot;last_opened_file_path&quot;: &quot;//wsl$/Ubuntu/home/alice/buts5/www/html/wr602d-mmi22g02&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "feature/navigation",
+    "last_opened_file_path": "//wsl$/Ubuntu/home/alice/buts5/www/html/wr602d-mmi22g02",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="\\wsl$\Ubuntu\home\alice\buts5\www\html\wr602d-mmi22g02\application\templates" />
@@ -368,7 +378,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741767770833</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="feat:client">
+      <option name="closed" value="true" />
+      <created>1741769872017</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1741769872017</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -390,16 +408,5 @@
     <MESSAGE value="feat:test" />
     <MESSAGE value="feat:client" />
     <option name="LAST_COMMIT_MESSAGE" value="feat:client" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/application/src/Kernel.php</url>
-          <line>4</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
