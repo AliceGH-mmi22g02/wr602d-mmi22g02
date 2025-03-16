@@ -4,13 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82a2595b-d379-4348-95d1-97d3a197de38" name="Changes" comment="feat:nav">
+    <list default="true" id="82a2595b-d379-4348-95d1-97d3a197de38" name="Changes" comment="feat:security">
+      <change beforePath="$PROJECT_DIR$/.idea/codeception.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeception.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/phpspec.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpspec.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/application/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/application/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/bundles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/routes.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/migrations/Version20250224121627.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/migrations/Version20250224141028.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/application/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/Controller/SecurityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/Entity/File.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/Entity/File.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/Entity/Subscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/Entity/Subscription.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/Entity/User.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/Repository/UserRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/application/symfony.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/application/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/templates/security/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/application/templates/security/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/application/templates/security/login.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,6 +187,7 @@
       <path value="$PROJECT_DIR$/application/vendor/phpstan/phpstan" />
       <path value="$PROJECT_DIR$/application/vendor/phpmd/phpmd" />
       <path value="$PROJECT_DIR$/application/vendor/pdepend/pdepend" />
+      <path value="$PROJECT_DIR$/application/vendor/symfonycasts/verify-email-bundle" />
     </include_path>
   </component>
   <component name="ProjectColorInfo">{
@@ -184,23 +198,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "feature/security",
-    "last_opened_file_path": "//wsl$/Ubuntu/home/alice/buts5/www/html/wr602d-mmi22g02",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/security&quot;,
+    &quot;last_opened_file_path&quot;: &quot;//wsl$/Ubuntu/home/alice/buts5/www/html/wr602d-mmi22g02&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="\\wsl$\Ubuntu\home\alice\buts5\www\html\wr602d-mmi22g02\application\templates" />
@@ -230,6 +244,7 @@
       <workItem from="1741181115877" duration="10946000" />
       <workItem from="1741337564429" duration="47000" />
       <workItem from="1741763553550" duration="4376000" />
+      <workItem from="1742136417595" duration="8697000" />
     </task>
     <task id="LOCAL-00001" summary="feat:entites">
       <option name="closed" value="true" />
@@ -399,7 +414,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741774054586</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="feat:security">
+      <option name="closed" value="true" />
+      <created>1741779156762</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1741779156762</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -421,6 +444,7 @@
     <MESSAGE value="feat:test" />
     <MESSAGE value="feat:client" />
     <MESSAGE value="feat:nav" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat:nav" />
+    <MESSAGE value="feat:security" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat:security" />
   </component>
 </project>

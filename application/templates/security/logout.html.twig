@@ -1,0 +1,10 @@
+{# templates/security/logout.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Déconnexion{% endblock %}
+
+{% block body %}
+    <h1>Vous avez été déconnecté avec succès !</h1>
+    <p>Merci d'avoir utilisé notre site. À bientôt !</p>
+    <a href="{{ path('app_login') }}">Se reconnecter</a>
+{% endblock %}
