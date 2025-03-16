@@ -57,7 +57,8 @@ class GotenbergService
             if ($response->getStatusCode() !== 200) {
                 throw new RuntimeException('Erreur lors de la génération du PDF : ' . $response->getContent(false));
             }
-        } catch (ClientExceptionInterface |
+        } catch (
+            ClientExceptionInterface |
             RedirectionExceptionInterface |
             ServerExceptionInterface |
             TransportExceptionInterface $e

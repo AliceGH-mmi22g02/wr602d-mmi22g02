@@ -5,25 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82a2595b-d379-4348-95d1-97d3a197de38" name="Changes" comment="feat:security">
-      <change beforePath="$PROJECT_DIR$/.idea/codeception.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeception.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/phpspec.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpspec.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/application/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/application/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/migrations/Version20250224121627.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/migrations/Version20250224141028.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/Controller/SecurityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/Entity/File.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/Entity/File.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/Entity/Subscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/Entity/Subscription.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/Entity/User.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/Repository/UserRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/application/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/application/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/application/templates/security/login.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,7 +226,7 @@
       <workItem from="1741181115877" duration="10946000" />
       <workItem from="1741337564429" duration="47000" />
       <workItem from="1741763553550" duration="4376000" />
-      <workItem from="1742136417595" duration="8697000" />
+      <workItem from="1742136417595" duration="9359000" />
     </task>
     <task id="LOCAL-00001" summary="feat:entites">
       <option name="closed" value="true" />
@@ -422,7 +404,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741779156762</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="feat:security">
+      <option name="closed" value="true" />
+      <created>1742146719323</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1742146719323</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
