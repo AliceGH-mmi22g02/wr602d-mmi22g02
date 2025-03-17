@@ -1,7 +1,5 @@
 <?php
 
-// src/Controller/PdfController.php
-
 namespace App\Controller;
 
 use DateTimeImmutable;
@@ -14,16 +12,23 @@ use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use App\Entity\File;
 use Doctrine\ORM\EntityManagerInterface;
+use App\Repository\FileRepository;
+use App\Entity\User;
 
 class PdfController extends AbstractController
 {
     private GotenbergService $gotenbergService;
     private EntityManagerInterface $em;
+    private FileRepository $fileRepository;
 
-    public function __construct(GotenbergService $gotenbergService, EntityManagerInterface $em)
-    {
+    public function __construct(
+        GotenbergService $gotenbergService,
+        EntityManagerInterface $em,
+        FileRepository $fileRepository
+    ) {
         $this->gotenbergService = $gotenbergService;
         $this->em = $em;
+        $this->fileRepository = $fileRepository;
     }
 
     /**
@@ -47,22 +52,43 @@ class PdfController extends AbstractController
 
             if ($uploadedFile) {
                 $filePath = $uploadedFile->getRealPath();
-                $originalFileName = $uploadedFile->getClientOriginalName();  // Nom du fichier téléchargé
+                $originalFileName = $uploadedFile->getClientOriginalName();
 
                 try {
-                    // Générer le PDF à partir du fichier HTML
+                    $user = $this->getUser();
+                    if (!$user instanceof User) {
+                        return new Response('Utilisateur non connecté.', 403);
+                    }
+
+                    $subscription = $user->getSubscription();
+                    if (!$subscription) {
+                        return new Response('Aucune souscription trouvée.', 403);
+                    }
+
+                    $maxPdfPerMonth = $subscription->getMaxPdf();
+                    $startOfMonth = new DateTimeImmutable('first day of this month 00:00:00');
+                    $endOfMonth = new DateTimeImmutable('last day of this month 23:59:59');
+
+                    $pdfCount = $this->fileRepository->countPdfGeneratedByUserOnDate(
+                        $user->getId(),
+                        $startOfMonth,
+                        $endOfMonth
+                    );
+
+                    if ($pdfCount >= $maxPdfPerMonth) {
+                        return $this->render('pdf/max_pdf.html.twig');
+                    }
+
                     $pdfResponse = $this->gotenbergService->generatePdfFromHtmlFile($filePath);
 
-                    // Créer une nouvelle entité File et la remplir
                     $file = new File();
-                    $file->setName($originalFileName);  // Enregistrer le nom du fichier téléchargé
+                    $file->setName($originalFileName);
                     $file->setCreatedAt(new DateTimeImmutable());
+                    $file->setUser($user);
 
-                    // Sauvegarder l'entité File dans la base de données
                     $this->em->persist($file);
                     $this->em->flush();
 
-                    // Retourner la réponse PDF après avoir persisté l'entité File
                     return $pdfResponse;
                 } catch (RuntimeException $e) {
                     return new Response($e->getMessage(), 500);

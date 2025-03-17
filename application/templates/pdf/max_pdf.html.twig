@@ -1,0 +1,8 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Max PDF{% endblock %}
+
+{% block body %}
+    <h2>Vous avez atteint la limite mensuelle de génération de PDF.</h2>
+    <a href="{{ path('app_login') }}">Faire évoluer mon abonnement</a>
+{% endblock %}

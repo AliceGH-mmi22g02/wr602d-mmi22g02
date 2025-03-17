@@ -3,6 +3,8 @@
 namespace App\Controller;
 
 use App\Entity\User;
+use App\Entity\Subscription;
+
 use App\Form\RegistrationFormType;
 use Doctrine\ORM\EntityManagerInterface;
 
@@ -36,6 +38,9 @@ class RegistrationController extends AbstractController
             // encode the plain password
             $user->setPassword($userPasswordHasher->hashPassword($user, $plainPassword));
             $user->setRoles(['ROLE_USER']);
+
+            $subscription = $entityManager->getRepository(Subscription::class)->findOneBy(['name' => 'Free']);
+            $user->setSubscription($subscription);
 
             $entityManager->persist($user);
             $entityManager->flush();
