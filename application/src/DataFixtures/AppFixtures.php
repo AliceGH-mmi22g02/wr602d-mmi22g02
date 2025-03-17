@@ -46,7 +46,8 @@ class AppFixtures extends Fixture
             ],
             [
                 'name' => 'Pro',
-                'description' => 'Solution complète de conversion de PDFs pour entreprises, avec des fonctionnalités personnalisées.',
+                'description' => 'Solution complète de conversion de PDFs pour entreprises, 
+                avec des fonctionnalités personnalisées.',
                 'maxPdf' => 9,
                 'price' => 3.99,
                 'specialPrice' => 2.99, // Pas de prix spécial
