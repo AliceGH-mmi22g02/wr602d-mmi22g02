@@ -1,4 +1,5 @@
 <?php
+// src/DataFixtures/AppFixtures.php
 
 namespace App\DataFixtures;
 
@@ -12,7 +13,7 @@ use Faker\Generator;
 
 class AppFixtures extends Fixture
 {
-    private $faker;
+    private Generator $faker;
 
     // Injection de Faker dans le constructeur
     public function __construct(Generator $faker)
