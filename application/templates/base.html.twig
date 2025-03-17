@@ -15,13 +15,17 @@
     <nav>
         <ul>
             <li><a href="{{ path('homepage') }}">Accueil</a></li>
-            <li><a href="{{ path('app_security') }}">Se connecter</a></li>
             <li><a href="{{ path('pdf_generate') }}">Générer un PDF</a></li>
-            <li><a href="{{ path('app_subscription') }}">Modifier l'abonnement</a></li>
+            <li><a href="{{ path('app_subscription') }}">Abonnement</a></li>
             <li><a href="{{ path('app_history') }}">Historique</a></li>
-        </ul>
+            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                <li><a href="{{ path('app_logout') }}">Se déconnecter</a></li>
+            {% else %}
+                <li><a href="{{ path('app_login') }}">Se connecter</a></li>
+                <li><a href="{{ path('app_register') }}">Inscription</a></li>
+            {% endif %}</ul>
     </nav>
-        {% block body %}
+    {% block body %}
         {% endblock %}
     </body>
 </html>

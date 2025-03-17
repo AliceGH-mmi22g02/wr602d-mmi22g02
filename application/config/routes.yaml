@@ -13,6 +13,10 @@ app_login:
     path: /login
     controller: App\Controller\SecurityController::login
 
+app_logout:
+    path: /logout
+    controller: App\Controller\SecurityController::logout
+
 homepage:
     path: /
     controller: App\Controller\HomeController::index
@@ -24,4 +28,6 @@ subscription_change:
 history:
     path: /history
     controller: App\Controller\HistoryController::index
+
+
 

@@ -9,21 +9,6 @@
         <Configuration>
           <option name="path" value="$PROJECT_DIR$/application/tests" />
         </Configuration>
-        <Configuration>
-          <option name="path" value="$PROJECT_DIR$/application/tests" />
-        </Configuration>
-        <Configuration>
-          <option name="path" value="$PROJECT_DIR$/application/tests" />
-        </Configuration>
-        <Configuration>
-          <option name="path" value="$PROJECT_DIR$/application/tests" />
-        </Configuration>
-        <Configuration>
-          <option name="path" value="$PROJECT_DIR$/application/tests" />
-        </Configuration>
-        <Configuration>
-          <option name="path" value="$PROJECT_DIR$/application/tests" />
-        </Configuration>
       </list>
     </option>
   </component>

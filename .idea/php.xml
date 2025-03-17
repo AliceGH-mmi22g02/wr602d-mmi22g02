@@ -145,6 +145,7 @@
       <path value="$PROJECT_DIR$/application/vendor/phpstan/phpstan" />
       <path value="$PROJECT_DIR$/application/vendor/phpmd/phpmd" />
       <path value="$PROJECT_DIR$/application/vendor/pdepend/pdepend" />
+      <path value="$PROJECT_DIR$/application/vendor/symfonycasts/verify-email-bundle" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />
