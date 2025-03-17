@@ -17,13 +17,12 @@ final class HistoryController extends AbstractController
         // Récupérer l'utilisateur connecté
         $user = $this->getUser();
 
-        // Vérifier si l'utilisateur est connecté
+        // Initialiser la variable $files
+        $files = [];
+
+        // Si l'utilisateur est connecté, récupérer tous ses fichiers triés par date de création
         if ($user) {
-            // Récupérer tous les fichiers de l'utilisateur triés par date de création (du plus récent au plus ancien)
             $files = $fileRepository->findBy(['user' => $user], ['createdAt' => 'DESC']);
-        } else {
-            // Si l'utilisateur n'est pas connecté, il n'y a pas de fichiers à afficher
-            $files = [];
         }
 
         return $this->render('history/index.html.twig', [
