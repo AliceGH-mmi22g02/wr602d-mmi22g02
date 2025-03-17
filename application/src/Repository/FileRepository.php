@@ -51,4 +51,18 @@ class FileRepository extends ServiceEntityRepository
             ->getQuery()
             ->getResult();
     }
+
+    public function countPdfGeneratedByUserOnDate($userId, $startOfDay, $endOfDay)
+    {
+
+        return $this->createQueryBuilder('p')
+            ->select('COUNT(p.id)')
+            ->where('p.user = :userId')
+            ->andWhere('p.createdAt BETWEEN :startOfDay AND :endOfDay')
+            ->setParameter('userId', $userId)
+            ->setParameter('startOfDay', $startOfDay)
+            ->setParameter('endOfDay', $endOfDay)
+            ->getQuery()
+            ->getSingleScalarResult();
+    }
 }

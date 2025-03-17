@@ -1,7 +1,24 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello SubscriptionController!{% endblock %}
+{% block title %}Abonnements{% endblock %}
 
 {% block body %}
-<h1>Abonnement</h1>
+    <h1>Choisissez un abonnement</h1>
+
+    <div class="subscriptions">
+        {% for subscription in subscriptions %}
+            <div class="subscription">
+                <h2>{{ subscription.name }}</h2>
+                <p>{{ subscription.description }}</p>
+                <p>Max PDFs: {{ subscription.maxPdf }}</p>
+                <p>Prix: {{ subscription.price }} €</p>
+                <p>Réduction: {{ subscription.specialPrice }} €</p>
+                <p>Offre du {{ subscription.specialPriceFrom|date('d/m/Y') }} au {{ subscription.specialPriceTo|date('d/m/Y') }}</p>
+
+                <a href="{{ path('app_subscription_change', {'id': subscription.id}) }}" class="btn btn-primary">
+                    Souscrire
+                </a>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}

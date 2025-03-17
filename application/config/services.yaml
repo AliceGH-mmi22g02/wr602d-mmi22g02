@@ -7,6 +7,8 @@ parameters:
     gotenberg_url: 'http://gotenberg:3000'
 
 services:
+    Faker\Generator:
+        factory: [ 'Faker\Factory', 'create' ]
     App\Service\GotenbergService:
         arguments:
             $gotenbergUrl: '%env(GOTENBERG_URL)%'
