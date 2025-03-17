@@ -1,5 +1,4 @@
 <?php
-
 namespace App\DataFixtures;
 
 use App\Entity\File;
@@ -14,7 +13,7 @@ class AppFixtures extends Fixture
 {
     public function load(ObjectManager $manager): void
     {
-        $faker = Factory::create(); // Initialisation de Faker
+        $faker = Factory::create(); // Instanciation manuelle de Faker
 
         // Crée 3 abonnements liés à la génération et la conversion de PDFs
         $subscriptions = [
@@ -47,8 +46,7 @@ class AppFixtures extends Fixture
             ],
             [
                 'name' => 'Pro',
-                'description' => 'Solution complète de conversion de PDFs pour entreprises, 
-                avec des fonctionnalités personnalisées.',
+                'description' => 'Solution complète de conversion de PDFs pour entreprises, avec des fonctionnalités personnalisées.',
                 'maxPdf' => 9,
                 'price' => 3.99,
                 'specialPrice' => 2.99, // Pas de prix spécial
