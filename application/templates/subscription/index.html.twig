@@ -5,6 +5,8 @@
 {% block body %}
     <h1>Choisissez un abonnement</h1>
 
+    <h2>Abonnement actuel {{ subName }}</h2>
+
     <div class="subscriptions">
         {% for subscription in subscriptions %}
             <div class="subscription">

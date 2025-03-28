@@ -2,11 +2,15 @@
 
 namespace App\Controller;
 
+use App\Entity\User;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 final class SecurityController extends AbstractController
 {
@@ -27,5 +31,30 @@ final class SecurityController extends AbstractController
     {
         $session->invalidate();
         return $this->render('security/logout.html.twig');
+    }
+
+    #[Route('/forgot-password', name: 'app_forgot_password')]
+    public function forgotPassword(
+        Request $request,
+        EntityManagerInterface $entityManager,
+        UserPasswordHasherInterface $passwordHasher
+    ): Response {
+        if ($request->isMethod('POST')) {
+            $email = $request->request->get('email');
+            $newPassword = $request->request->get('newPassword');
+
+            $user = $entityManager->getRepository(User::class)->findOneBy(['email' => $email]);
+
+                // Hache le mot de passe avant de le sauvegarder
+                $hashedPassword = $passwordHasher->hashPassword($user, $newPassword);
+
+                $user->setPassword($hashedPassword);
+
+                $entityManager->flush();
+
+                return $this->render('security/password_reset.html.twig');
+        }
+
+        return $this->render('security/forgot_password.html.twig');
     }
 }

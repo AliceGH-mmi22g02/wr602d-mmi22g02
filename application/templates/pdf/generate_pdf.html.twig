@@ -1,13 +1,31 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Générer PDF{% endblock %}
+{% block title %}Générer ou convertir un PDF{% endblock %}
 
 {% block body %}
     <h1>Générer ou convertir un PDF</h1>
 
-    <h2>Générer un PDF à partir d'un fichier HTML</h2>
-    {{ form_start(form) }}
-    {{ form_row(form.htmlFile) }}
-    <button class="btn btn-primary" type="submit">Générer PDF</button>
-    {{ form_end(form) }}
+    <p> Nombre de pdf généré : {{ nbpdf}} </p>
+    <div>
+        <p>
+            Vous pouvez en générer encore :
+            {{ (maxPdf - nbpdf) < 0 ? 0 : (maxPdf - nbpdf) }}
+        </p>
+
+        {% if (maxPdf - nbpdf) < 0 %}
+            <a href="{{ path('app_subscription') }}">Abonnez-vous pour plus de génération</a>
+        {% endif %}
+    </div>
+
+    <h3>Générer un PDF à partir d'un fichier HTML</h3>
+    {{ form_start(formFile) }}
+    {{ form_row(formFile.htmlFile) }}
+    <button class="btn btn-primary" type="submit">Générer PDF à partir du fichier</button>
+    {{ form_end(formFile) }}
+
+    <h3>Générer un PDF à partir d'un contenu HTML</h3>
+    {{ form_start(formContent) }}
+    {{ form_row(formContent.htmlContent) }}
+    <button class="btn btn-primary" type="submit">Générer PDF à partir du contenu HTML</button>
+    {{ form_end(formContent) }}
 {% endblock %}

@@ -4,9 +4,6 @@ namespace App\Service;
 
 use Exception;
 use RuntimeException;
-use Symfony\Contracts\HttpClient\Exception\ClientExceptionInterface;
-use Symfony\Contracts\HttpClient\Exception\RedirectionExceptionInterface;
-use Symfony\Contracts\HttpClient\Exception\ServerExceptionInterface;
 use Symfony\Contracts\HttpClient\Exception\TransportExceptionInterface;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
@@ -54,18 +51,6 @@ class GotenbergService
         }
 
         try {
-            if ($response->getStatusCode() !== 200) {
-                throw new RuntimeException('Erreur lors de la génération du PDF : ' . $response->getContent(false));
-            }
-        } catch (ClientExceptionInterface |
-            RedirectionExceptionInterface |
-            ServerExceptionInterface |
-            TransportExceptionInterface $e
-        ) {
-            return new Response('Erreur lors de la requête au serveur : ' . $e->getMessage(), 500);
-        }
-
-        try {
             return new Response($response->getContent(), 200, [
                 'Content-Type' => 'application/pdf',
                 'Content-Disposition' => 'attachment; filename=myPdf.pdf',
@@ -82,13 +67,5 @@ class GotenbergService
         }
         $htmlContent = file_get_contents($filePath);
         return $this->generatePdfFromHtml($htmlContent);
-    }
-
-    /**
-     * Méthode pour gérer les exceptions non traitées globalement.
-     */
-    public function handleException(Exception $e): Response
-    {
-        return new Response('Une erreur inattendue s\'est produite : ' . $e->getMessage(), 500);
     }
 }

@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82a2595b-d379-4348-95d1-97d3a197de38" name="Changes" comment="feat:e2etest">
+    <list default="true" id="82a2595b-d379-4348-95d1-97d3a197de38" name="Changes" comment="feat:polish">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/Controller/HistoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/Controller/HistoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/Controller/PdfController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/Controller/PdfController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/Controller/SecurityController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +29,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/customquery" />
+        <entry key="$PROJECT_DIR$" value="feature/cypress" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -183,23 +186,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "feature/cypress",
-    "last_opened_file_path": "//wsl$/Ubuntu/home/alice/buts5/wr508d/WR509D-Introduction-a-l-IA",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/polishing&quot;,
+    &quot;last_opened_file_path&quot;: &quot;//wsl$/Ubuntu/home/alice/buts5/wr508d/WR509D-Introduction-a-l-IA&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="\\wsl$\Ubuntu\home\alice\buts5\www\html\wr602d-mmi22g02\application\cypress\e2e" />
@@ -234,7 +237,8 @@
       <workItem from="1742195729165" duration="16620000" />
       <workItem from="1742223608535" duration="1292000" />
       <workItem from="1742281766797" duration="10015000" />
-      <workItem from="1742984157928" duration="2792000" />
+      <workItem from="1742984157928" duration="9687000" />
+      <workItem from="1743174058964" duration="10009000" />
     </task>
     <task id="LOCAL-00001" summary="feat:entites">
       <option name="closed" value="true" />
@@ -500,7 +504,55 @@
       <option name="project" value="LOCAL" />
       <updated>1742986067968</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="feat:e2etest">
+      <option name="closed" value="true" />
+      <created>1742990733138</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1742990733138</updated>
+    </task>
+    <task id="LOCAL-00035" summary="feat:polish">
+      <option name="closed" value="true" />
+      <created>1743183831250</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1743183831250</updated>
+    </task>
+    <task id="LOCAL-00036" summary="feat:polish">
+      <option name="closed" value="true" />
+      <created>1743184190826</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1743184190826</updated>
+    </task>
+    <task id="LOCAL-00037" summary="feat:polish">
+      <option name="closed" value="true" />
+      <created>1743184405523</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1743184405523</updated>
+    </task>
+    <task id="LOCAL-00038" summary="feat:polish">
+      <option name="closed" value="true" />
+      <created>1743184754058</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1743184754058</updated>
+    </task>
+    <task id="LOCAL-00039" summary="feat:polish">
+      <option name="closed" value="true" />
+      <created>1743184881694</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1743184881694</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -525,6 +577,7 @@
     <MESSAGE value="feat:security" />
     <MESSAGE value="feat:customquery" />
     <MESSAGE value="feat:e2etest" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat:e2etest" />
+    <MESSAGE value="feat:polish" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat:polish" />
   </component>
 </project>
