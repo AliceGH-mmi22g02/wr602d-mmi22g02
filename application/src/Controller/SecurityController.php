@@ -12,7 +12,6 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
-
 final class SecurityController extends AbstractController
 {
     #[Route('/login', name: 'app_login')]

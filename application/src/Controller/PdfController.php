@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Controller;
 
 use DateTimeImmutable;
@@ -24,11 +23,10 @@ class PdfController extends AbstractController
     private FileRepository $fileRepository;
 
     public function __construct(
-        GotenbergService       $gotenbergService,
+        GotenbergService $gotenbergService,
         EntityManagerInterface $em,
-        FileRepository         $fileRepository
-    )
-    {
+        FileRepository $fileRepository
+    ) {
         $this->gotenbergService = $gotenbergService;
         $this->em = $em;
         $this->fileRepository = $fileRepository;
@@ -190,6 +188,5 @@ class PdfController extends AbstractController
             'maxPdf' => $maxPdfPerMonth,
             'nbpdf' => $pdfCount,
         ]);
-
     }
 }
