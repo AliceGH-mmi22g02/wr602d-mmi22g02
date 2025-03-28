@@ -68,5 +68,4 @@ class GotenbergService
         $htmlContent = file_get_contents($filePath);
         return $this->generatePdfFromHtml($htmlContent);
     }
-
 }
