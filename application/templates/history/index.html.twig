@@ -3,7 +3,7 @@
 {% block title %}Historique{% endblock %}
 
 {% block body %}
-    <div class="example-wrapper">
+    <div class="container-height text-center">
         <h1>Historique des fichiers générés</h1>
         <p> Nombre de pdf généré : {{ nbpdf}} </p>
         <div>
@@ -12,12 +12,12 @@
             {{ (maxPdf - nbpdf) < 0 ? 0 : (maxPdf - nbpdf) }}
         </p>
 
-        {% if (maxPdf - nbpdf) < 0 %}
-            <a href="{{ path('app_subscription') }}">Abonnez-vous pour plus de génération</a>
+        {% if (maxPdf - nbpdf) <= 0 %}
+            <a class="btn btn-primary" href="{{ path('app_subscription') }}">Abonnez-vous pour plus de génération</a>
         {% endif %}
         </div>
         {% if files is not empty %}
-            <ul>
+            <ul class="history">
                 {% for file in files %}
                     <li>
                         <strong>{{ file.name }}</strong> - {{ file.createdAt|date('d/m/Y H:i') }}

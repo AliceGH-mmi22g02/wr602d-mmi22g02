@@ -7,7 +7,7 @@
         <h1>Bienvenue sur notre générateur de PDF en ligne !</h1>
         <p>Notre outil vous permet de convertir facilement vos fichiers HTML en PDF. Voici quelques fonctionnalités :</p>
 
-        <ul>
+        <ul class="fonctionalité">
             <li><strong>Conversion rapide</strong> : Téléchargez simplement votre fichier HTML et obtenez un PDF prêt à l'emploi.</li>
             <li><strong>Histoire des fichiers générés</strong> : Consultez l'historique de tous vos fichiers générés et téléchargez-les à nouveau si nécessaire.</li>
             <li><strong>Simplicité d'utilisation</strong> : Notre interface est simple et rapide, pour vous faire gagner du temps.</li>
@@ -16,16 +16,20 @@
         <h2>Pourquoi choisir notre service ?</h2>
         <p>Nous offrons une solution rapide, sécurisée et gratuite pour tous vos besoins de conversion de fichiers HTML en PDF.</p>
 
-        <div class="cta-container">
-            <h3>Essayez dès maintenant !</h3>
-            <p>Convertissez vos fichiers HTML en PDF en quelques clics.</p>
-            <a href="{{ path('pdf_generate') }}" class="cta-button">Commencer la conversion</a>
+        <div class="cta-container d-flex justify-content-center">
+            <div class="cta-box p-4 border rounded">
+                <h3>Essayez dès maintenant !</h3>
+                <p>Convertissez vos fichiers HTML en PDF en quelques clics.</p>
+                <a href="{{ path('pdf_generate') }}" class="cta-button btn btn-primary">Commencer la conversion</a>
+            </div>
         </div>
 
-        <div class="testimonials">
-            <h3>Avis des utilisateurs</h3>
-            <p>"Cet outil m'a fait gagner un temps précieux ! Facile à utiliser et rapide." - <em>Marie D.</em></p>
-            <p>"Un service parfait pour convertir mes documents professionnels." - <em>Jean P.</em></p>
+        <div class="testimonials d-flex justify-content-center mt-5">
+            <div class="testimonial-box p-4 border rounded">
+                <h3>Avis des utilisateurs</h3>
+                <p>"Cet outil m'a fait gagner un temps précieux ! Facile à utiliser et rapide." - <em>Marie D.</em></p>
+                <p>"Un service parfait pour convertir mes documents professionnels." - <em>Jean P.</em></p>
+            </div>
         </div>
     </div>
 {% endblock %}

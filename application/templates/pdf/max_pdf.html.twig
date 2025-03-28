@@ -3,6 +3,8 @@
 {% block title %}Max PDF{% endblock %}
 
 {% block body %}
-    <h2>Vous avez atteint la limite mensuelle de génération de PDF.</h2>
-    <a href="{{ path('app_login') }}">Faire évoluer mon abonnement</a>
+    <div class="container-height align-content-center max-pdf">
+        <h2>Vous avez atteint la limite mensuelle de génération de PDF.</h2>
+        <a class="btn btn-primary" href="{{ path('app_subscription') }}">Faire évoluer mon abonnement</a>
+    </div>
 {% endblock %}

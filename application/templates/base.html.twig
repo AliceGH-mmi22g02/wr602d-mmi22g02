@@ -1,34 +1,83 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
-        {% block stylesheets %}
-        {% endblock %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+    {% block stylesheets %}
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    {% endblock %}
+    {% block javascripts %}
+        {% block importmap %}{{ importmap('app') }}{% endblock %}
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    {% endblock %}
+</head>
+<body>
+<header class="bg-dark text-light py-3">
+    <div class="container">
+        <div class="d-flex align-items-center align-content-center justify-content-between">
+            <h1 class="mx-3">MyPDF</h1> <!-- Titre centré -->
+            <nav>
+                <ul class="d-flex mb-0">
+                    <li class="nav-item"><a class="nav-link text-light" href="{{ path('homepage') }}">Accueil</a></li>
+                    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                        <li class="nav-item"><a class="nav-link text-light" href="{{ path('pdf_generate') }}">Générer un PDF</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="{{ path('app_history') }}">Historique</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="{{ path('app_subscription') }}">Abonnement</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="{{ path('app_logout') }}">Se déconnecter</a></li>
+                    {% else %}
+                        <li class="nav-item"><a class="nav-link text-light" href="{{ path('app_login') }}">Se connecter</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="{{ path('app_register') }}">Inscription</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
 
-        {% block javascripts %}
-            {% block importmap %}{{ importmap('app') }}{% endblock %}
-        {% endblock %}
-    </head>
-    <body>
-    <header>
-    <nav>
-        <ul>
-            <li><a href="{{ path('homepage') }}">Accueil</a></li>
-            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                <li><a href="{{ path('pdf_generate') }}">Générer un PDF</a></li>
-                <li><a href="{{ path('app_history') }}">Historique</a></li>
-                <li><a href="{{ path('app_subscription') }}">Abonnement</a></li>
-                <li><a href="{{ path('app_logout') }}">Se déconnecter</a></li>
-            {% else %}
-                <li><a href="{{ path('app_login') }}">Se connecter</a></li>
-                <li><a href="{{ path('app_register') }}">Inscription</a></li>
-            {% endif %}</ul>
-    </nav>
-    </header>
+<div class="container mt-4">
     {% block body %}
+        <!-- Contenu de la page -->
+        <div class="page-header">
+            <h1>Bienvenue sur le générateur de PDF</h1>
+            <p>Générez vos documents PDF facilement en quelques clics.</p>
+        </div>
 
-        {% endblock %}
-    </body>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Générer un PDF</h5>
+                        <p class="card-text">Créez vos documents PDF directement depuis le site.</p>
+                        <a href="{{ path('pdf_generate') }}" class="btn btn-primary">Créer</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Historique</h5>
+                        <p class="card-text">Accédez à vos documents générés précédemment.</p>
+                        <a href="{{ path('app_history') }}" class="btn btn-primary">Voir l'historique</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Abonnement</h5>
+                        <p class="card-text">Découvrez nos offres d'abonnement pour plus de fonctionnalités.</p>
+                        <a href="{{ path('app_subscription') }}" class="btn btn-primary">S'abonner</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+</div>
+
+<footer>
+    <p class="text-center mt-4">&copy; 2025 Générateur de PDF. Tous droits réservés.</p>
+</footer>
+</body>
 </html>

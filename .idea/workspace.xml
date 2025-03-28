@@ -4,11 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82a2595b-d379-4348-95d1-97d3a197de38" name="Changes" comment="feat:polish">
+    <list default="true" id="82a2595b-d379-4348-95d1-97d3a197de38" name="Changes" comment="feat:front">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/Controller/HistoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/Controller/HistoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/Controller/PdfController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/Controller/PdfController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/Controller/SecurityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/assets/styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/application/assets/styles/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/Form/RegistrationFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/Form/RegistrationFormType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/application/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/templates/history/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/application/templates/history/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/application/templates/home/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/templates/pdf/generate_pdf.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/application/templates/pdf/generate_pdf.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/templates/pdf/max_pdf.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/application/templates/pdf/max_pdf.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/templates/registration/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/application/templates/registration/register.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/templates/registration/register_sucess.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/application/templates/registration/register_sucess.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/templates/security/forgot_password.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/application/templates/security/forgot_password.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/application/templates/security/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/templates/security/logout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/application/templates/security/logout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/templates/security/password_reset.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/application/templates/security/password_reset.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/templates/subscription/change/change_sucess.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/application/templates/subscription/change/change_sucess.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/templates/subscription/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/application/templates/subscription/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +41,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/cypress" />
+        <entry key="$PROJECT_DIR$" value="feature/polishing" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -186,23 +198,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/polishing&quot;,
-    &quot;last_opened_file_path&quot;: &quot;//wsl$/Ubuntu/home/alice/buts5/wr508d/WR509D-Introduction-a-l-IA&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "feature/front-end",
+    "last_opened_file_path": "//wsl$/Ubuntu/home/alice/buts5/wr508d/WR509D-Introduction-a-l-IA",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="\\wsl$\Ubuntu\home\alice\buts5\www\html\wr602d-mmi22g02\application\cypress\e2e" />
@@ -238,7 +250,7 @@
       <workItem from="1742223608535" duration="1292000" />
       <workItem from="1742281766797" duration="10015000" />
       <workItem from="1742984157928" duration="9687000" />
-      <workItem from="1743174058964" duration="10009000" />
+      <workItem from="1743174058964" duration="18727000" />
     </task>
     <task id="LOCAL-00001" summary="feat:entites">
       <option name="closed" value="true" />
@@ -552,7 +564,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743184881694</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="feat:polish">
+      <option name="closed" value="true" />
+      <created>1743185479271</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1743185479271</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -578,6 +598,7 @@
     <MESSAGE value="feat:customquery" />
     <MESSAGE value="feat:e2etest" />
     <MESSAGE value="feat:polish" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat:polish" />
+    <MESSAGE value="feat:front" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat:front" />
   </component>
 </project>
