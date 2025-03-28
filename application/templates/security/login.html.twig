@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Connexion{% endblock %}
+
+{% block body %}
+    <div class="container container-height d-flex justify-content-center align-items-center">
+        <div class="card p-4" style="max-width: 400px; width: 100%;">
+            <h1 class="text-center mb-4">Connexion</h1>
+
+            {% if error %}
+                <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            {% endif %}
+
+            <form method="post">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Email:</label>
+                    <input type="text" id="username" name="_username" value="{{ username }}" class="form-control" required />
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label">Mot de passe:</label>
+                    <input type="password" id="password" name="_password" class="form-control" required />
+                </div>
+
+                <button class="btn btn-primary w-100" type="submit">Se connecter</button>
+            </form>
+
+            <div class="mt-3 text-center">
+                <a href="{{ path('app_forgot_password') }}">Mot de passe oublié ?</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

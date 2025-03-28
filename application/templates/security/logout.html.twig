@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Déconnexion{% endblock %}
+
+{% block body %}
+    <div class="container-height align-content-center max-pdf">
+        <h2>Vous avez été déconnecté avec succès !</h2>
+        <p>Merci d'avoir utilisé notre site. À bientôt !</p>
+        <a class="btn btn-primary" href="{{ path('app_login') }}">Se reconnecter</a>
+    </div>
+{% endblock %}

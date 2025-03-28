@@ -1,0 +1,283 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
+
+header {
+    background-color: #343a40;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #f8f9fa; /* Ajout de couleur pour rendre le texte visible */
+    padding: 10px;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    color : #fe0000;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Aligne les items verticalement */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Utilisation de flex pour aligner les <li> horizontalement */
+}
+
+nav ul li {
+    margin: 0 10px; /* Ajout d'un espace entre les éléments */
+}
+
+nav ul li a {
+    color: #f8f9fa;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+nav ul li a:hover {
+    color: #cb0000;
+}
+
+footer {
+    background-color: #343a40;
+    color: #f8f9fa;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+.page-header {
+    margin-bottom: 20px;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: #fe0000;
+    border-color: #fe0000;
+}
+
+.btn-primary:hover {
+    background-color: #b10000;
+    border-color: #7d0000;
+}
+
+.fonctionalité {
+    text-align: center;
+}
+
+.container-height {
+    height: 100vh;
+}
+
+
+.max-pdf {
+    text-align: center;
+}
+
+.container-height {
+    height: 100vh;
+}
+
+.history {
+    margin: 50px;
+}
+
+.subscriptions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 20px;
+}
+
+.subscription {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.subscription h2 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #343a40;
+}
+
+.subscription p {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 10px;
+    flex-grow: 1; /* Force l'extension pour égaliser les hauteurs */
+}
+
+.subscription .price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fe0000;
+    margin: 15px 0;
+}
+
+.subscription .special-price {
+    font-size: 1.5rem;
+    color: #28a745;
+    text-decoration: line-through;
+}
+
+.subscription .btn-primary {
+    margin-top: auto; /* Force le bouton à rester en bas */
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .subscriptions {
+        grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+    }
+}
+
+
+/* Style spécifique pour la page d'accueil */
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #343a40;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 1rem;
+    color: #495057;
+    margin-bottom: 30px;
+}
+
+ul li {
+    margin-bottom: 15px;
+}
+
+ul li strong {
+    color: #fe0000;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #343a40;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.cta-container {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.cta-container h3 {
+    font-size: 1.8rem;
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+.cta-container p {
+    font-size: 1.1rem;
+    color: #495057;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    padding: 12px 30px;
+    background-color: #fe0000;
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #b10000;
+}
+
+.testimonials {
+    background-color: #f8f9fa;
+    padding: 30px;
+    margin-top: 50px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.testimonials h3 {
+    font-size: 1.8rem;
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+.testimonials p {
+    font-size: 1.1rem;
+    color: #495057;
+    margin-bottom: 10px;
+}
+
+.testimonials em {
+    font-style: italic;
+    color: #fe0000;
+}
+
+/* Responsive design */
+@media (max-width: 767px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .cta-button {
+        padding: 10px 25px;
+        font-size: 1.1rem;
+    }
+
+    .testimonials p {
+        font-size: 1rem;
+    }
+
+    .cta-container, .testimonials {
+        padding: 20px;
+    }
+}

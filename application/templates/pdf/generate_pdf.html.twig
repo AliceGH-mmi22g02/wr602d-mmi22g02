@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Générer ou convertir un PDF{% endblock %}
+
+{% block body %}
+    <div class="container container-height mt-5">
+        <h1 class="text-center">Générer ou convertir un PDF</h1>
+
+        <div class="text-center my-4">
+            <p class="lead">Nombre de PDF générés : <strong>{{ nbpdf }}</strong></p>
+            <p>
+                Vous pouvez encore en générer :
+                <strong class="text-danger">{{ (maxPdf - nbpdf) < 0 ? 0 : (maxPdf - nbpdf) }}</strong>
+            </p>
+            {% if (maxPdf - nbpdf) <= 0 %}
+                <a href="{{ path('app_subscription') }}" class="btn btn-warning">Abonnez-vous pour plus de génération</a>
+            {% endif %}
+        </div>
+
+        <div class="row">
+            <!-- Génération depuis un fichier HTML -->
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h3 class="card-title text-center">Depuis un fichier HTML</h3>
+                        {{ form_start(formFile) }}
+                        <div class="mb-3">
+                            {{ form_row(formFile.htmlFile, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-primary" type="submit">Générer PDF</button>
+                        </div>
+                        {{ form_end(formFile) }}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Génération depuis un contenu HTML -->
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h3 class="card-title text-center">Depuis un contenu HTML</h3>
+                        {{ form_start(formContent) }}
+                        <div class="mb-3">
+                            {{ form_row(formContent.htmlContent, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-primary" type="submit">Générer PDF</button>
+                        </div>
+                        {{ form_end(formContent) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

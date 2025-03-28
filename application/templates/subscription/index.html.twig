@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Abonnements{% endblock %}
+
+{% block body %}
+    <div class="container py-5">
+        <h1 class="text-center mb-4">Choisissez un abonnement</h1>
+
+        <h2 class="text-center text-muted">Abonnement actuel : <strong>{{ subName }}</strong></h2>
+
+        <div class="subscriptions mt-4">
+            {% for subscription in subscriptions %}
+                <div class="subscription">
+                    <h2>{{ subscription.name }}</h2>
+                    <p>{{ subscription.description }}</p>
+
+                    <div class="price">{{ subscription.price }} €</div>
+
+                    {% if subscription.specialPrice %}
+                        <div class="special-price">{{ subscription.specialPrice }} €</div>
+                        <p class="text-muted">
+                            Offre du {{ subscription.specialPriceFrom|date('d/m/Y') }} au {{ subscription.specialPriceTo|date('d/m/Y') }}
+                        </p>
+                    {% endif %}
+
+                    <p>Max PDFs : <strong>{{ subscription.maxPdf }}</strong></p>
+
+                    <a href="{{ path('app_subscription_change', {'id': subscription.id}) }}" class="btn btn-primary">
+                        Souscrire
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

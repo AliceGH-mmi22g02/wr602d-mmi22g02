@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription réussi{% endblock %}
+
+{% block body %}
+    <div class="container-height align-content-center max-pdf">
+        <h2>Votre compte a été créé avec succès !</h2>
+        <a class="btn btn-primary" href="{{ path('app_login') }}">Se connecter</a>
+    </div>
+{% endblock %}

@@ -4,25 +4,191 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82a2595b-d379-4348-95d1-97d3a197de38" name="Changes" comment="" />
+    <list default="true" id="82a2595b-d379-4348-95d1-97d3a197de38" name="Changes" comment="feat:front">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/assets/styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/application/assets/styles/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/Form/RegistrationFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/Form/RegistrationFormType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/application/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/templates/history/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/application/templates/history/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/application/templates/home/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/templates/pdf/generate_pdf.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/application/templates/pdf/generate_pdf.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/templates/pdf/max_pdf.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/application/templates/pdf/max_pdf.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/templates/registration/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/application/templates/registration/register.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/templates/registration/register_sucess.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/application/templates/registration/register_sucess.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/templates/security/forgot_password.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/application/templates/security/forgot_password.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/application/templates/security/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/templates/security/logout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/application/templates/security/logout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/templates/security/password_reset.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/application/templates/security/password_reset.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/templates/subscription/change/change_sucess.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/application/templates/subscription/change/change_sucess.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/templates/subscription/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/application/templates/subscription/index.html.twig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/application/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="feature/polishing" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/application/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/cache" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/dotenv" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/polyfill-php83" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/application/vendor/composer" />
+      <path value="$PROJECT_DIR$/application/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/application/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/application/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/application/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/framework-bundle" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/runtime" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/flex" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/cache-contracts" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/var-exporter" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/application/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/doctrine-bridge" />
+      <path value="$PROJECT_DIR$/application/vendor/doctrine/sql-formatter" />
+      <path value="$PROJECT_DIR$/application/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/application/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/application/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/application/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/application/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/application/vendor/doctrine/doctrine-migrations-bundle" />
+      <path value="$PROJECT_DIR$/application/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/application/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/application/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/application/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/application/vendor/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/application/vendor/doctrine/migrations" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/twig-bundle" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/asset-mapper" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/doctrine-messenger" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/clock" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/mailer" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/security-csrf" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/expression-language" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/maker-bundle" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/security-core" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/security-http" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/web-link" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/web-profiler-bundle" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/serializer" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/stimulus-bundle" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/type-info" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/debug-bundle" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/notifier" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/property-info" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/password-hasher" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/intl" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/twig-bridge" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/http-client" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/form" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/messenger" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/asset" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/monolog-bridge" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/application/vendor/phpstan/phpdoc-parser" />
+      <path value="$PROJECT_DIR$/application/vendor/twig/extra-bundle" />
+      <path value="$PROJECT_DIR$/application/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/application/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/application/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/application/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/application/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/application/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/application/vendor/sebastian/code-unit" />
+      <path value="$PROJECT_DIR$/application/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/application/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/application/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/application/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/application/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/application/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/application/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/application/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/application/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/application/vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/application/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/application/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/application/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/application/vendor/masterminds/html5" />
+      <path value="$PROJECT_DIR$/application/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/application/vendor/psr/link" />
+      <path value="$PROJECT_DIR$/application/vendor/psr/clock" />
+      <path value="$PROJECT_DIR$/application/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/application/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/application/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/application/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/application/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/application/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/application/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/application/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/application/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/application/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/security-bundle" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/browser-kit" />
+      <path value="$PROJECT_DIR$/application/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/application/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/application/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/property-access" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/monolog-bundle" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/application/vendor/squizlabs/php_codesniffer" />
+      <path value="$PROJECT_DIR$/application/vendor/phpstan/phpstan" />
+      <path value="$PROJECT_DIR$/application/vendor/phpmd/phpmd" />
+      <path value="$PROJECT_DIR$/application/vendor/pdepend/pdepend" />
+      <path value="$PROJECT_DIR$/application/vendor/symfonycasts/verify-email-bundle" />
+      <path value="$PROJECT_DIR$/application/vendor/doctrine/data-fixtures" />
+      <path value="$PROJECT_DIR$/application/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/application/vendor/fakerphp/faker" />
+    </include_path>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
@@ -32,21 +198,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/symfony-setup&quot;,
-    &quot;last_opened_file_path&quot;: &quot;//wsl$/Ubuntu/home/alice/buts5/www/html/wr602d-mmi22g02&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "feature/front-end",
+    "last_opened_file_path": "//wsl$/Ubuntu/home/alice/buts5/wr508d/WR509D-Introduction-a-l-IA",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu\home\alice\buts5\www\html\wr602d-mmi22g02\application\cypress\e2e" />
+      <recent name="\\wsl$\Ubuntu\home\alice\buts5\www\html\wr602d-mmi22g02\application\templates" />
+      <recent name="\\wsl$\Ubuntu\home\alice\buts5\www\html\wr602d-mmi22g02\application" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu\home\alice\buts5\www\html\wr602d-mmi22g02" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -58,10 +236,369 @@
       <workItem from="1740390804527" duration="419000" />
       <workItem from="1740391404737" duration="404000" />
       <workItem from="1740391819359" duration="1184000" />
+      <workItem from="1740474717000" duration="2101000" />
+      <workItem from="1740479881136" duration="141000" />
+      <workItem from="1740727218987" duration="7790000" />
+      <workItem from="1740986053616" duration="21615000" />
+      <workItem from="1741008981484" duration="392000" />
+      <workItem from="1741013753672" duration="761000" />
+      <workItem from="1741181115877" duration="10946000" />
+      <workItem from="1741337564429" duration="47000" />
+      <workItem from="1741763553550" duration="4376000" />
+      <workItem from="1742136417595" duration="10116000" />
+      <workItem from="1742195729165" duration="16620000" />
+      <workItem from="1742223608535" duration="1292000" />
+      <workItem from="1742281766797" duration="10015000" />
+      <workItem from="1742984157928" duration="9687000" />
+      <workItem from="1743174058964" duration="18727000" />
     </task>
+    <task id="LOCAL-00001" summary="feat:entites">
+      <option name="closed" value="true" />
+      <created>1740400202557</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1740400202557</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat:test">
+      <option name="closed" value="true" />
+      <created>1740408444721</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1740408444721</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat:test">
+      <option name="closed" value="true" />
+      <created>1740476826052</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1740476826052</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat:test">
+      <option name="closed" value="true" />
+      <created>1740727932250</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1740727932250</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat:test">
+      <option name="closed" value="true" />
+      <created>1740728580179</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1740728580179</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat:test">
+      <option name="closed" value="true" />
+      <created>1740728664465</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1740728664465</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat:test">
+      <option name="closed" value="true" />
+      <created>1740728841261</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1740728841261</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat:test">
+      <option name="closed" value="true" />
+      <created>1740730460688</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1740730460688</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat:test">
+      <option name="closed" value="true" />
+      <created>1740731113882</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1740731113882</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat:test">
+      <option name="closed" value="true" />
+      <created>1740731408308</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1740731408308</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat:test">
+      <option name="closed" value="true" />
+      <created>1740731591709</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1740731591709</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feat:test">
+      <option name="closed" value="true" />
+      <created>1740731882989</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1740731882989</updated>
+    </task>
+    <task id="LOCAL-00013" summary="feat:test">
+      <option name="closed" value="true" />
+      <created>1740732494650</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1740732494650</updated>
+    </task>
+    <task id="LOCAL-00014" summary="feat:client">
+      <option name="closed" value="true" />
+      <created>1741009128287</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1741009128287</updated>
+    </task>
+    <task id="LOCAL-00015" summary="feat:client">
+      <option name="closed" value="true" />
+      <created>1741185373498</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1741185373498</updated>
+    </task>
+    <task id="LOCAL-00016" summary="feat:client">
+      <option name="closed" value="true" />
+      <created>1741189008685</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1741189008685</updated>
+    </task>
+    <task id="LOCAL-00017" summary="feat:client">
+      <option name="closed" value="true" />
+      <created>1741767509746</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1741767509746</updated>
+    </task>
+    <task id="LOCAL-00018" summary="feat:client">
+      <option name="closed" value="true" />
+      <created>1741767770833</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1741767770833</updated>
+    </task>
+    <task id="LOCAL-00019" summary="feat:client">
+      <option name="closed" value="true" />
+      <created>1741769872017</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1741769872017</updated>
+    </task>
+    <task id="LOCAL-00020" summary="feat:nav">
+      <option name="closed" value="true" />
+      <created>1741773863072</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1741773863072</updated>
+    </task>
+    <task id="LOCAL-00021" summary="feat:nav">
+      <option name="closed" value="true" />
+      <created>1741774054586</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1741774054586</updated>
+    </task>
+    <task id="LOCAL-00022" summary="feat:security">
+      <option name="closed" value="true" />
+      <created>1741779156762</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1741779156762</updated>
+    </task>
+    <task id="LOCAL-00023" summary="feat:security">
+      <option name="closed" value="true" />
+      <created>1742146719323</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1742146719323</updated>
+    </task>
+    <task id="LOCAL-00024" summary="feat:security">
+      <option name="closed" value="true" />
+      <created>1742147462856</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1742147462856</updated>
+    </task>
+    <task id="LOCAL-00025" summary="feat:security">
+      <option name="closed" value="true" />
+      <created>1742198390420</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1742198390420</updated>
+    </task>
+    <task id="LOCAL-00026" summary="feat:customquery">
+      <option name="closed" value="true" />
+      <created>1742210791464</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1742210791464</updated>
+    </task>
+    <task id="LOCAL-00027" summary="feat:customquery">
+      <option name="closed" value="true" />
+      <created>1742211407446</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1742211407446</updated>
+    </task>
+    <task id="LOCAL-00028" summary="feat:customquery">
+      <option name="closed" value="true" />
+      <created>1742211542204</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1742211542204</updated>
+    </task>
+    <task id="LOCAL-00029" summary="feat:customquery">
+      <option name="closed" value="true" />
+      <created>1742211894996</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1742211894996</updated>
+    </task>
+    <task id="LOCAL-00030" summary="feat:customquery">
+      <option name="closed" value="true" />
+      <created>1742212012094</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1742212012094</updated>
+    </task>
+    <task id="LOCAL-00031" summary="feat:customquery">
+      <option name="closed" value="true" />
+      <created>1742212433620</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1742212433620</updated>
+    </task>
+    <task id="LOCAL-00032" summary="feat:customquery">
+      <option name="closed" value="true" />
+      <created>1742212750398</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1742212750398</updated>
+    </task>
+    <task id="LOCAL-00033" summary="feat:e2etest">
+      <option name="closed" value="true" />
+      <created>1742986067968</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1742986067968</updated>
+    </task>
+    <task id="LOCAL-00034" summary="feat:e2etest">
+      <option name="closed" value="true" />
+      <created>1742990733138</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1742990733138</updated>
+    </task>
+    <task id="LOCAL-00035" summary="feat:polish">
+      <option name="closed" value="true" />
+      <created>1743183831250</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1743183831250</updated>
+    </task>
+    <task id="LOCAL-00036" summary="feat:polish">
+      <option name="closed" value="true" />
+      <created>1743184190826</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1743184190826</updated>
+    </task>
+    <task id="LOCAL-00037" summary="feat:polish">
+      <option name="closed" value="true" />
+      <created>1743184405523</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1743184405523</updated>
+    </task>
+    <task id="LOCAL-00038" summary="feat:polish">
+      <option name="closed" value="true" />
+      <created>1743184754058</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1743184754058</updated>
+    </task>
+    <task id="LOCAL-00039" summary="feat:polish">
+      <option name="closed" value="true" />
+      <created>1743184881694</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1743184881694</updated>
+    </task>
+    <task id="LOCAL-00040" summary="feat:polish">
+      <option name="closed" value="true" />
+      <created>1743185479271</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1743185479271</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat:entites" />
+    <MESSAGE value="feat:test" />
+    <MESSAGE value="feat:client" />
+    <MESSAGE value="feat:nav" />
+    <MESSAGE value="feat:security" />
+    <MESSAGE value="feat:customquery" />
+    <MESSAGE value="feat:e2etest" />
+    <MESSAGE value="feat:polish" />
+    <MESSAGE value="feat:front" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat:front" />
   </component>
 </project>
