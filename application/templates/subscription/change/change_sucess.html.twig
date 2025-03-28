@@ -3,6 +3,8 @@
 {% block title %}Souscription Validé{% endblock %}
 
 {% block body %}
-    <h2>Votre abonnement a bien été modifier !</h2>
-    <a href="{{ path('pdf_generate') }}">Générer un PDF</a>
+    <div class="container-height align-content-center max-pdf">
+        <h2>Votre abonnement a bien été modifier !</h2>
+        <a class="btn btn-primary" href="{{ path('pdf_generate') }}">Générer un PDF</a>
+    </div>
 {% endblock %}
