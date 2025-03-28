@@ -34,8 +34,11 @@ final class SecurityController extends AbstractController
     }
 
     #[Route('/forgot-password', name: 'app_forgot_password')]
-    public function forgotPassword(Request $request, EntityManagerInterface $entityManager, UserPasswordHasherInterface $passwordHasher): Response
-    {
+    public function forgotPassword(
+        Request $request,
+        EntityManagerInterface $entityManager,
+        UserPasswordHasherInterface $passwordHasher
+    ): Response {
         if ($request->isMethod('POST')) {
             $email = $request->request->get('email');
             $newPassword = $request->request->get('newPassword');
