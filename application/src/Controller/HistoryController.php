@@ -22,7 +22,6 @@ final class HistoryController extends AbstractController
         $files = [];
 
         // Si l'utilisateur est connecté, récupérer tous ses fichiers triés par date de création
-        if ($user) {
             $files = $fileRepository->findBy(['user' => $user], ['createdAt' => 'DESC']);
 
             // Récupérer l'abonnement de l'utilisateur (si existe)
@@ -38,10 +37,6 @@ final class HistoryController extends AbstractController
                 $startOfMonth,
                 $endOfMonth
             );
-        } else {
-            $maxPdfPerMonth = 0;
-            $pdfCount = 0;
-        }
 
         return $this->render('history/index.html.twig', [
             'files' => $files,

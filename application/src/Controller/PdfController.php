@@ -37,129 +37,23 @@ class PdfController extends AbstractController
      */
     public function generatePdf(Request $request): Response
     {
-        // Formulaire pour télécharger un fichier HTML
-        $formFile = $this->createFormBuilder()
-            ->add('htmlFile', FileType::class, [
-                'label' => 'Votre fichier HTML :',
-                'mapped' => false,
-                'required' => true,
-            ])
-            ->getForm();
+        // Formulaires pour télécharger un fichier HTML ou saisir du contenu
+        $formFile = $this->createFileForm();
+        $formContent = $this->createContentForm();
 
-        // Formulaire pour saisir du contenu HTML directement
-        $formContent = $this->createFormBuilder()
-            ->add('htmlContent', TextareaType::class, [
-                'label' => 'Votre contenu HTML :',
-                'mapped' => false,
-                'required' => true,
-            ])
-            ->getForm();
-
-        // Traitement du formulaire pour fichier HTML
+        // Traitement des formulaires
         $formFile->handleRequest($request);
-
-        // Traitement du formulaire pour contenu HTML
         $formContent->handleRequest($request);
 
         if ($formFile->isSubmitted() && $formFile->isValid()) {
-            /** @var UploadedFile $uploadedFile */
-            $uploadedFile = $formFile->get('htmlFile')->getData();
-
-            if ($uploadedFile) {
-                $filePath = $uploadedFile->getRealPath();
-                $originalFileName = $uploadedFile->getClientOriginalName();
-
-                try {
-                    $user = $this->getUser();
-                    if (!$user instanceof User) {
-                        return new Response('Utilisateur non connecté.', 403);
-                    }
-
-                    $subscription = $user->getSubscription();
-                    if (!$subscription) {
-                        return new Response('Aucune souscription trouvée.', 403);
-                    }
-
-                    $maxPdfPerMonth = $subscription->getMaxPdf();
-
-                    $startOfMonth = new DateTimeImmutable('first day of this month 00:00:00');
-                    $endOfMonth = new DateTimeImmutable('last day of this month 23:59:59');
-
-                    $pdfCount = $this->fileRepository->countPdfGeneratedByUserOnDate(
-                        $user->getId(),
-                        $startOfMonth,
-                        $endOfMonth
-                    );
-
-                    if ($pdfCount >= $maxPdfPerMonth) {
-                        return $this->render('pdf/max_pdf.html.twig');
-                    }
-
-                    // Génération du PDF à partir du fichier HTML
-                    $pdfResponse = $this->gotenbergService->generatePdfFromHtmlFile($filePath);
-
-                    // Sauvegarde de l'information du fichier dans la base de données
-                    $file = new File();
-                    $file->setName($originalFileName);
-                    $file->setCreatedAt(new DateTimeImmutable());
-                    $file->setUser($user);
-
-                    $this->em->persist($file);
-                    $this->em->flush();
-
-                    return $pdfResponse;
-                } catch (RuntimeException $e) {
-                    return new Response($e->getMessage(), 500);
-                }
-            }
+            return $this->handleFileForm($formFile, $request);
         }
 
         if ($formContent->isSubmitted() && $formContent->isValid()) {
-            $htmlContent = $formContent->get('htmlContent')->getData();
-
-            try {
-                $user = $this->getUser();
-                if (!$user instanceof User) {
-                    return new Response('Utilisateur non connecté.', 403);
-                }
-
-                $subscription = $user->getSubscription();
-                if (!$subscription) {
-                    return new Response('Aucune souscription trouvée.', 403);
-                }
-
-                $maxPdfPerMonth = $subscription->getMaxPdf();
-                $startOfMonth = new DateTimeImmutable('first day of this month 00:00:00');
-                $endOfMonth = new DateTimeImmutable('last day of this month 23:59:59');
-
-                $pdfCount = $this->fileRepository->countPdfGeneratedByUserOnDate(
-                    $user->getId(),
-                    $startOfMonth,
-                    $endOfMonth
-                );
-
-                if ($pdfCount >= $maxPdfPerMonth) {
-                    return $this->render('pdf/max_pdf.html.twig');
-                }
-
-                // Génération du PDF à partir du contenu HTML
-                $pdfResponse = $this->gotenbergService->generatePdfFromHtml($htmlContent);
-
-                // Sauvegarde de l'information du fichier dans la base de données
-                $file = new File();
-                $file->setName('Contenu HTML');
-                $file->setCreatedAt(new DateTimeImmutable());
-                $file->setUser($user);
-
-                $this->em->persist($file);
-                $this->em->flush();
-
-                return $pdfResponse;
-            } catch (RuntimeException $e) {
-                return new Response($e->getMessage(), 500);
-            }
+            return $this->handleContentForm($formContent, $request);
         }
 
+        // Variables utilisateur et souscription
         $user = $this->getUser();
         if (!$user instanceof User) {
             return new Response('Utilisateur non connecté.', 403);
@@ -171,22 +65,117 @@ class PdfController extends AbstractController
         }
 
         $maxPdfPerMonth = $subscription->getMaxPdf();
+        $pdfCount = $this->countPdfGenerated($user);
 
-        $startOfMonth = new DateTimeImmutable('first day of this month 00:00:00');
-        $endOfMonth = new DateTimeImmutable('last day of this month 23:59:59');
-
-        $pdfCount = $this->fileRepository->countPdfGeneratedByUserOnDate(
-            $user->getId(),
-            $startOfMonth,
-            $endOfMonth
-        );
-
-// Passer les variables au template
+        // Passer les variables au template
         return $this->render('pdf/generate_pdf.html.twig', [
             'formFile' => $formFile->createView(),
             'formContent' => $formContent->createView(),
             'maxPdf' => $maxPdfPerMonth,
             'nbpdf' => $pdfCount,
         ]);
+    }
+
+    private function createFileForm()
+    {
+        return $this->createFormBuilder()
+            ->add('htmlFile', FileType::class, [
+                'label' => 'Votre fichier HTML :',
+                'mapped' => false,
+                'required' => true,
+            ])
+            ->getForm();
+    }
+
+    private function createContentForm()
+    {
+        return $this->createFormBuilder()
+            ->add('htmlContent', TextareaType::class, [
+                'label' => 'Votre contenu HTML :',
+                'mapped' => false,
+                'required' => true,
+            ])
+            ->getForm();
+    }
+
+    private function handleFileForm($formFile, Request $request): Response
+    {
+        /** @var UploadedFile $uploadedFile */
+        $uploadedFile = $formFile->get('htmlFile')->getData();
+
+        if ($uploadedFile) {
+            $filePath = $uploadedFile->getRealPath();
+            $originalFileName = $uploadedFile->getClientOriginalName();
+
+            try {
+                $user = $this->getUser();
+                $subscription = $user->getSubscription();
+                $pdfCount = $this->countPdfGenerated($user);
+
+                if ($pdfCount >= $subscription->getMaxPdf()) {
+                    return $this->render('pdf/max_pdf.html.twig');
+                }
+
+                // Génération du PDF
+                $pdfResponse = $this->gotenbergService->generatePdfFromHtmlFile($filePath);
+
+                // Sauvegarde du fichier
+                $this->saveFile($originalFileName, $user);
+
+                return $pdfResponse;
+            } catch (RuntimeException $e) {
+                return new Response($e->getMessage(), 500);
+            }
+        }
+
+        return $this->render('pdf/generate_pdf.html.twig', ['formFile' => $formFile->createView()]);
+    }
+
+    private function handleContentForm($formContent, Request $request): Response
+    {
+        $htmlContent = $formContent->get('htmlContent')->getData();
+
+        try {
+            $user = $this->getUser();
+            $subscription = $user->getSubscription();
+            $pdfCount = $this->countPdfGenerated($user);
+
+            if ($pdfCount >= $subscription->getMaxPdf()) {
+                return $this->render('pdf/max_pdf.html.twig');
+            }
+
+            // Génération du PDF
+            $pdfResponse = $this->gotenbergService->generatePdfFromHtml($htmlContent);
+
+            // Sauvegarde du fichier
+            $this->saveFile('Contenu HTML', $user);
+
+            return $pdfResponse;
+        } catch (RuntimeException $e) {
+            return new Response($e->getMessage(), 500);
+        }
+    }
+
+    private function saveFile(string $fileName, User $user): void
+    {
+        $file = new File();
+        $file->setName($fileName);
+        $file->setCreatedAt(new DateTimeImmutable());
+        $file->setUser($user);
+
+        $this->em->persist($file);
+        $this->em->flush();
+    }
+
+    private function countPdfGenerated(User $user): int
+    {
+        $startOfMonth = new DateTimeImmutable('first day of this month 00:00:00');
+        $endOfMonth = new DateTimeImmutable('last day of this month 23:59:59');
+
+        return $this->fileRepository->countPdfGeneratedByUserOnDate(
+            $user->getId(),
+            $startOfMonth,
+            $endOfMonth
+        );
     }
 }

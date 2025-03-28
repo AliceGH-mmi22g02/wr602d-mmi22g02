@@ -45,7 +45,6 @@ final class SecurityController extends AbstractController
 
             $user = $entityManager->getRepository(User::class)->findOneBy(['email' => $email]);
 
-            if ($user) {
                 // Hache le mot de passe avant de le sauvegarder
                 $hashedPassword = $passwordHasher->hashPassword($user, $newPassword);
 
@@ -54,9 +53,6 @@ final class SecurityController extends AbstractController
                 $entityManager->flush();
 
                 return $this->render('security/password_reset.html.twig');
-            } else {
-                $this->addFlash('error', 'Aucun utilisateur trouvé avec cet email');
-            }
         }
 
         return $this->render('security/forgot_password.html.twig');

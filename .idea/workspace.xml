@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82a2595b-d379-4348-95d1-97d3a197de38" name="Changes" comment="feat:polish">
-      <change beforePath="$PROJECT_DIR$/application/src/Service/GotenbergService.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/Service/GotenbergService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/Controller/HistoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/Controller/HistoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/Controller/PdfController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/Controller/PdfController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/Controller/SecurityController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +238,7 @@
       <workItem from="1742223608535" duration="1292000" />
       <workItem from="1742281766797" duration="10015000" />
       <workItem from="1742984157928" duration="9687000" />
-      <workItem from="1743174058964" duration="9306000" />
+      <workItem from="1743174058964" duration="10009000" />
     </task>
     <task id="LOCAL-00001" summary="feat:entites">
       <option name="closed" value="true" />
@@ -533,7 +536,23 @@
       <option name="project" value="LOCAL" />
       <updated>1743184405523</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="feat:polish">
+      <option name="closed" value="true" />
+      <created>1743184754058</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1743184754058</updated>
+    </task>
+    <task id="LOCAL-00039" summary="feat:polish">
+      <option name="closed" value="true" />
+      <created>1743184881694</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1743184881694</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
