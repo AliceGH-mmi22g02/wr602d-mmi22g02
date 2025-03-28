@@ -13,10 +13,13 @@ final class SubscriptionController extends AbstractController
     #[Route('/subscription', name: 'app_subscription')]
     public function index(EntityManagerInterface $em): Response
     {
+        $user = $this->getUser();
+        $subName = $user->getSubscription()->getName();
+
         $subscriptions = $em->getRepository(Subscription::class)->findAll();
 
         return $this->render('subscription/index.html.twig', [
-            'subscriptions' => $subscriptions,
+            'subscriptions' => $subscriptions, 'subName' => $subName
         ]);
     }
 

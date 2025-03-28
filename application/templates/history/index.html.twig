@@ -5,7 +5,17 @@
 {% block body %}
     <div class="example-wrapper">
         <h1>Historique des fichiers générés</h1>
+        <p> Nombre de pdf généré : {{ nbpdf}} </p>
+        <div>
+        <p>
+            Vous pouvez en générer encore :
+            {{ (maxPdf - nbpdf) < 0 ? 0 : (maxPdf - nbpdf) }}
+        </p>
 
+        {% if (maxPdf - nbpdf) < 0 %}
+            <a href="{{ path('app_subscription') }}">Abonnez-vous pour plus de génération</a>
+        {% endif %}
+        </div>
         {% if files is not empty %}
             <ul>
                 {% for file in files %}

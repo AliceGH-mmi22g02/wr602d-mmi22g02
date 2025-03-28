@@ -8,6 +8,7 @@ use App\Repository\FileRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
+use DateTimeImmutable;
 
 final class HistoryController extends AbstractController
 {
@@ -23,10 +24,29 @@ final class HistoryController extends AbstractController
         // Si l'utilisateur est connecté, récupérer tous ses fichiers triés par date de création
         if ($user) {
             $files = $fileRepository->findBy(['user' => $user], ['createdAt' => 'DESC']);
+
+            // Récupérer l'abonnement de l'utilisateur (si existe)
+            $subscription = $user->getSubscription();
+            $maxPdfPerMonth = $subscription->getMaxPdf();
+
+            $startOfMonth = new DateTimeImmutable('first day of this month 00:00:00');
+            $endOfMonth = new DateTimeImmutable('last day of this month 23:59:59');
+
+            // Compter le nombre de PDF générés par l'utilisateur ce mois-ci
+            $pdfCount = $fileRepository->countPdfGeneratedByUserOnDate(
+                $user->getId(),
+                $startOfMonth,
+                $endOfMonth
+            );
+        } else {
+            $maxPdfPerMonth = 0;
+            $pdfCount = 0;
         }
 
         return $this->render('history/index.html.twig', [
             'files' => $files,
+            'nbpdf' => $pdfCount,
+            'maxPdf' => $maxPdfPerMonth,
         ]);
     }
 }
